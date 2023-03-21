@@ -6,7 +6,7 @@ const linkedList = () => {
 
     function append(value) {
         if(head === null){
-            head = node(value);
+            prepend(value);
         }
         else{
             let currentNode = head;
@@ -16,15 +16,18 @@ const linkedList = () => {
             }
             currentNode.next = node(value);
             console.log(currentNode);   
-            console.log(currentNode.next);   
+            console.log(currentNode.next);
+            console.log(length)
+            length+=1;   
         }
-        console.log(length)
-        length+=1;
+        
     }
 
-    // function prepend(value) {
-        
-    // }
+    function prepend(value) { 
+        head = node(value, head)
+        console.log(head);
+        length+=1;
+    }
 
     function getLength() {
         return length;
@@ -34,7 +37,7 @@ const linkedList = () => {
         head,
         append,
         getLength,
-
+        prepend,
     }
 }
 

@@ -1,0 +1,24 @@
+{
+  "name": "linked-list-learning-odin",
+  "version": "1.0.0",
+  "description": "Linked list practice - The Odin Project curriculum",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunsd/linked-list-learning-odin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dunsd/linked-list-learning-odin/issues"
+  },
+  "homepage": "https://github.com/dunsd/linked-list-learning-odin#readme",
+  "devDependencies": {
+    "eslint": "^8.36.0"
+  }
+}

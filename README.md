@@ -6,7 +6,7 @@ Run node index.js
 
 # Function List:
 
-append(value) - Append the entered value to the end of the list.
+append(value) - Append the entered value to the end of the list.\n
 prepend(value) - Prepend the entered value to the start of the list.
 getLength() - Console log the current length of the list.
 getHead() - Return the current head node of the list.

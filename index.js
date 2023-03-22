@@ -40,3 +40,9 @@ console.log(list.getTail());
 console.log(list.contains(4));
 
 console.log(list.contains(77));
+
+console.log(list.find(4));
+
+console.log(list.find(73));
+
+console.log(list.toString());

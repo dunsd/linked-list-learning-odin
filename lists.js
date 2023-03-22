@@ -75,6 +75,29 @@ const linkedList = () => {
         return false;
     }
 
+    function find(value) {
+        let currentHead = head;
+        let index = 0;
+        while(currentHead.next != null) {
+            if(currentHead.value === value) {return index}
+            currentHead = currentHead.next;
+            index += 1;
+        }
+        return false;
+
+    }
+
+    function toString(){
+        let str = "";
+        let currentNode = head;
+        while(currentNode) {
+            str += `(${currentNode.value}) -> `;
+            currentNode = currentNode.next;
+        }
+        return (str + "null");
+
+    }
+
     return{
         append,
         getLength,
@@ -84,6 +107,8 @@ const linkedList = () => {
         atIndex,
         pop,
         contains,
+        find,
+        toString,
     }
 }
 

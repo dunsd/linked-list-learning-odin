@@ -26,7 +26,7 @@ const linkedList = () => {
     }
 
     function getLength() {
-        return length;
+        console.log("Length: " + length);
     }
 
     function getHead() {
@@ -53,22 +53,28 @@ const linkedList = () => {
         if(index<= 0){ return head}
         let currentIndex = 0;
         let currentNode = head;
-        while(currentIndex<index) {
+        while(currentIndex<index-1) {
             currentNode = currentNode.next;
             currentIndex += 1;
         }
         return currentNode;
     }
 
+    function pop() {
+        let penIndex = atIndex(length-1);
+        //console.log(penIndex);
+        penIndex.next = null;
+        length -= 1;
+    }
 
     return{
-        head,
         append,
         getLength,
         prepend,
         getHead,
         getTail,
         atIndex,
+        pop,
     }
 }
 

@@ -98,6 +98,32 @@ const linkedList = () => {
 
     }
 
+    function insertAt(value, index) {
+        let currentNode = head;
+        let previousNode;
+        let currentIndex = 0;
+        while(currentIndex<index-1) {
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+            currentIndex += 1;
+        }
+        previousNode.next = node(value, currentNode);
+        length += 1;
+    }
+
+    function removeAt(index) {
+        let currentNode = head;
+        let previousNode;
+        let currentIndex = 0;
+        while(currentIndex<index-1) {
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+            currentIndex += 1;
+        }
+        previousNode.next = currentNode.next;
+        length -= 1;
+    }
+
     return{
         append,
         getLength,
@@ -109,6 +135,8 @@ const linkedList = () => {
         contains,
         find,
         toString,
+        insertAt,
+        removeAt,
     }
 }
 

@@ -46,3 +46,9 @@ console.log(list.find(4));
 console.log(list.find(73));
 
 console.log(list.toString());
+
+list.insertAt(60, 4);
+console.log(list.toString());
+
+list.removeAt(3);
+console.log(list.toString());

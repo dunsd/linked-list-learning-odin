@@ -52,3 +52,12 @@ console.log(list.toString());
 
 list.removeAt(3);
 console.log(list.toString());
+
+list.insertAt(60, 15);
+console.log(list.toString());
+
+list.insertAt(60, 0);
+console.log(list.toString());
+
+list.removeAt(0);
+console.log(list.toString());

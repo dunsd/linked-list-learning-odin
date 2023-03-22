@@ -99,6 +99,11 @@ const linkedList = () => {
     }
 
     function insertAt(value, index) {
+        if(index < 0 || index > length) {return console.log("Not a valid index.")}
+        if(index === 0) {
+            prepend(value);
+            return;
+        }
         let currentNode = head;
         let previousNode;
         let currentIndex = 0;
@@ -112,6 +117,12 @@ const linkedList = () => {
     }
 
     function removeAt(index) {
+        if(index < 0 || index > length) {return console.log("Not a valid index.")}
+        if(index === 0) {
+            head = head.next;
+            length -= 1;
+            return;
+        }
         let currentNode = head;
         let previousNode;
         let currentIndex = 0;

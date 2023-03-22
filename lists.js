@@ -10,22 +10,18 @@ const linkedList = () => {
         }
         else{
             let currentNode = head;
-            console.log(currentNode);
             while(currentNode.next !== null){
+                console.log(`current = ${currentNode}`);
+                console.log(head);
                 currentNode = currentNode.next;
             }
             currentNode.next = node(value);
-            console.log(currentNode);   
-            console.log(currentNode.next);
-            console.log(length)
             length+=1;   
         }
-        
     }
 
-    function prepend(value) { 
-        head = node(value, head)
-        console.log(head);
+    function prepend(value) {
+        head = node(value, head) 
         length+=1;
     }
 
@@ -33,11 +29,46 @@ const linkedList = () => {
         return length;
     }
 
+    function getHead() {
+        console.log("Head:");
+        return head;
+    }
+
+    function getTail() {
+        if(head === null) {
+            return"No list found";
+        }
+        else{
+            let currentNode = head;
+            while(currentNode.next !== null) {
+                currentNode = currentNode.next;
+            }
+            return currentNode;
+        }
+        
+    }
+
+    function atIndex(index) {
+        if(head === null) {return "No list found"}
+        if(index<= 0){ return head}
+        let currentIndex = 0;
+        let currentNode = head;
+        while(currentIndex<index) {
+            currentNode = currentNode.next;
+            currentIndex += 1;
+        }
+        return currentNode;
+    }
+
+
     return{
         head,
         append,
         getLength,
         prepend,
+        getHead,
+        getTail,
+        atIndex,
     }
 }
 

@@ -62,9 +62,17 @@ const linkedList = () => {
 
     function pop() {
         let penIndex = atIndex(length-1);
-        //console.log(penIndex);
         penIndex.next = null;
         length -= 1;
+    }
+
+    function contains(value) {
+        let currentHead = head;
+        while(currentHead.next != null) {
+            if(currentHead.value === value) { return true}
+            currentHead = currentHead.next;
+        }
+        return false;
     }
 
     return{
@@ -75,6 +83,7 @@ const linkedList = () => {
         getTail,
         atIndex,
         pop,
+        contains,
     }
 }
 

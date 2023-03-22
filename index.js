@@ -35,3 +35,8 @@ console.log(list.atIndex(5));
 console.log(list.getTail());
 list.pop();
 console.log(list.getTail());
+
+
+console.log(list.contains(4));
+
+console.log(list.contains(77));
